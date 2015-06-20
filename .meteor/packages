@@ -10,3 +10,6 @@ insecure
 iron:router
 aldeed:collection2
 aldeed:autoform
+yogiben:autoform-file
+cfs:standard-packages
+cfs:filesystem
