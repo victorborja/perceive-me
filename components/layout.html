@@ -1,0 +1,30 @@
+<template name="layout">
+
+ {{> header}}
+ 
+ {{> navbar}}
+
+ {{> yield }}
+
+ {{> footer}}
+
+</template>
+
+<template name="header">
+  Header
+</template>
+
+<template name="navbar">
+  <nav>
+    <ul>
+      <li>
+        <a href="{{ pathFor 'home' }}">Home</a> 
+        <a href="{{ pathFor 'newPerson' }}">Register yourself</a> 
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<template name="footer">
+  Footer
+</template>
