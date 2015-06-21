@@ -6,6 +6,10 @@ body {
 	background-color: #d55b19;
 }
 
+loadingdiv, footer #defaultCanvas {
+  display: none !important;
+}
+
 .logo {
 	width: 10%;
 	height: 10%;
