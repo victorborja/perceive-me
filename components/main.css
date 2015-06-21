@@ -26,12 +26,15 @@ h1 {
 	color: white;
 }
 
+.source {
+	font-family: Oswald, Helvetica, sans-serif;
+	color: black;
+}
+
 h2 {
 	margin-top: -8px;
 	font-family: Economica, Futura, sans-serif;
 	font-style: italic;
-	font-weight: 200;
-	font-size: 1.2em;
 	color: white;
 }
 

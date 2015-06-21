@@ -7,8 +7,6 @@
 
 
 <template name="layout">
-
- {{> header}}
  
  {{> navbar}}
 
@@ -27,21 +25,23 @@
 </template>
 
 <template name="navbar">
-  <nav>
-    <ul>
-      <li>
-        <a href="{{ pathFor 'home' }}">Home</a> 
-        <a href="{{ pathFor 'showPerson' }}">Review Someone</a> 
-        <a href="{{ pathFor 'newPerson' }}">Register yourself</a> 
-      </li>
-    </ul>
-  </nav>
+  <div class="ui inverted menu">
+    <a class="item" href="{{ pathFor 'home' }}">
+    HOME
+    </a>
+    <a class="item" href="{{ pathFor 'showPerson' }}">
+    THEY
+    </a>
+    <a class="item" href="{{ pathFor 'newPerson' }}">
+    YOU
+    </a>
+  </div>
 </template>
 
 <template name="footer">
   <footer>
      <small>
-       <a href="http://github.com/victorborja/percieve-me">SourceCode</a>
+       <a class="source" href="http://github.com/victorborja/perceive-me">READ SOURCE CODE</a>
      </small>
   </footer>
 </template>
