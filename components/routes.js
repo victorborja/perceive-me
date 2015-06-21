@@ -21,7 +21,7 @@ Router.route('reviewPerson', {
   path: '/they',
   template: 'reviewPerson',
   onBeforeAction: function () {
-    Session.set('reviewPerceptions', ['JAJA']);
+    Session.set('reviewPerceptions', []);
     this.next();
   },
   data: function () {
