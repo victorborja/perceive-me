@@ -55,7 +55,7 @@
         Session.set('reviewPerceptions', perceptions);
       },
 
-      'click [data-review-person] [data-done-review]': function () {
+      'click [data-done-review]': function () {
         var perceptions = Session.get('reviewPerceptions');
         console.log("new perceptions: ", perceptions);
 
@@ -70,7 +70,7 @@
         Session.set('reviewPerceptions', []);
       },
 
-      'click [data-meet-person] [data-show-other]': function () {
+      'click [data-show-other]': function () {
         window.location.reload();
       }
 
