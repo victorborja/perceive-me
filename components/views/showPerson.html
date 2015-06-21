@@ -12,7 +12,7 @@
 
 <template name="meetPerson">
   <div data-meet-person>
-    <img src="{{image_url}}" width="30" height="30" />
+    <img src="{{image_url}}"/>
 
     Meet this person life story:
 
@@ -28,19 +28,22 @@
    {{> perceptionsTags}}
    {{> perceptionsInput}}
 
-   <button data-show-other>Done</button>
+   <button data-show-other class='ui button primary'>Done</button>
   </div>
 </template>
 
 <template name="reviewPerson">
   <div data-review-person>
-   <img src="{{image_url}}" width="30" height="30" />
 
-   <label>How do you percieve this person?</label>
-   {{> perceptionsTags}}
-   {{> perceptionsInput}}
+   <div>
+     <h4>How do you percieve this person?</h4>
+     {{> perceptionsInput}}
+     <button data-done-review class="ui button primary">Done</button>
+   </div>
 
-   <button data-done-review>Done</button>
+   <p>{{> perceptionsTags}}</p>
+   <img src="{{image_url}}"/>
+
  </div>
 </template>
 

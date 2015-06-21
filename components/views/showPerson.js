@@ -19,6 +19,17 @@
 
 
     Template.showPerson.events({
+      'blur [data-perceptions-input] input': function (e) {
+        var tag = (e.target.value + "").trim();
+        if (tag != '')  {
+          var perceptions = Session.get('reviewPerceptions');
+          if (perceptions.indexOf(tag) < 0) {
+            perceptions.push(tag);
+          }
+          e.target.value = '';
+          Session.set('reviewPerceptions', perceptions);
+        }
+      },
 
       'keyup [data-perceptions-input] input': function (e) {
         var re = /[,\t\n\r]/i;
@@ -36,7 +47,7 @@
         }
       },
 
-      'click [data-show-person] [data-label].delete': function (e) {
+      'click [data-label].delete': function (e) {
         var perceptions = Session.get('reviewPerceptions');
         var tag = e.target.getAttribute('data-label');
         var idx = perceptions.indexOf(tag);

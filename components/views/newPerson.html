@@ -1,18 +1,23 @@
 <template name="newPerson">
 
-{{#autoForm collection="People" type="insert" id="newPersonForm" }}
+<section data-new-person>
 
-  {{> afQuickField rows=6 cols=60 name="story_a" label="¿A qué te dedicas y en qué te gusta ocupar tu tiempo?" }}
-  {{> afQuickField rows=6 cols=60 name="story_b" label="¿Qué es lo más sorprendente que te ha pasado?" }}
-  {{> afQuickField rows=6 cols=60 name="story_c" label="Descríbenos a detalle cómo fue tu día ayer." }}
-  {{> afQuickField rows=6 cols=60 name="story_d" label="¿Por qué a veces te consideras mala persona?" }}
-  {{> afQuickField rows=6 cols=60 name="story_e" label="¿Por qué a veces te consideras buena persona?" }}
-  {{> afQuickField rows=6 cols=60 name="story_f" label="Cuéntanos sobre el lugar donde vives." }}
+  {{#autoForm collection="People" type="insert" id="newPersonForm" }}
 
-  {{> afQuickField name="picture"}}
+    {{> afQuickField name="picture" label="Sube tu retrato" label-class="ui pointing below label" }}
 
-  <button type="submit" class="btn btn-primary">Save</button>
+    {{> afQuickField rows=6 cols=60 name="story_a" label-class="ui pointing below label"  label="¿A qué te dedicas y en qué te gusta ocupar tu tiempo?" }}
+    {{> afQuickField rows=6 cols=60 name="story_b" label-class="ui pointing below label"  label="¿Qué es lo más sorprendente que te ha pasado?" }}
+    {{> afQuickField rows=6 cols=60 name="story_c" label-class="ui pointing below label"  label="Descríbenos a detalle cómo fue tu día ayer." }}
+    {{> afQuickField rows=6 cols=60 name="story_d" label-class="ui pointing below label"  label="¿Por qué a veces te consideras mala persona?" }}
+    {{> afQuickField rows=6 cols=60 name="story_e" label-class="ui pointing below label"  label="¿Por qué a veces te consideras buena persona?" }}
+    {{> afQuickField rows=6 cols=60 name="story_f" label-class="ui pointing below label"  label="Cuéntanos sobre el lugar donde vives." }}
 
-{{/autoForm}}
+
+    <button type="submit" class="ui button primary">Save</button>
+
+  {{/autoForm}}
+
+</section>
 
 </template>
