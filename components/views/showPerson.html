@@ -1,16 +1,17 @@
 <template name="showPerson">
   {{#with person}} 
-    DA {{story_a}} {{../meetingPerson}}
-    {{#if ../meetingPerson}}
-      {{> meetPerson}}
-    {{else}}
-      {{> reviewPerson}} 
-    {{/if}}
+    <div data-show-person>
+      {{#if ../meetingPerson}}
+        {{> meetPerson}}
+      {{else}}
+        {{> reviewPerson}} 
+      {{/if}}
+    </div>
   {{/with}}
 </template>
 
 <template name="meetPerson">
-  <div data-show-person>
+  <div data-meet-person>
     <img src="{{image_url}}" width="30" height="30" />
 
     Meet this person life story:
@@ -18,6 +19,13 @@
     <p>{{story_a}}</p>
     <p>{{story_b}}</p>
     <p>{{story_c}}</p>
+
+    <label>Now that you know this person, which tags would you use?</label>
+
+   {{> perceptionsTags}}
+   {{> perceptionsInput}}
+
+   <button data-show-other>Done</button>
   </div>
 </template>
 
@@ -29,7 +37,7 @@
    {{> perceptionsTags}}
    {{> perceptionsInput}}
 
-   <button>Done</button>
+   <button data-done-review>Done</button>
  </div>
 </template>
 
@@ -38,6 +46,7 @@
   <div>
    {{#each ../reviewPerceptions}}
       <div class="ui label">
+        <i class="tags icon"></i>
         {{this}}
         <i class="delete icon" data-label="{{this}}"></i>
       </div> 

@@ -13,7 +13,7 @@ if (Meteor.isClient) {
 
   Template.showPerson.events({
 
-    'keyup [data-review-person] input[data-perceptions]': function (e) {
+    'keyup [data-show-person] input[data-perceptions]': function (e) {
       var re = /[,\t\n\r]/i;
       var keyCodes = [188, 13, 32];
       var capture = keyCodes.indexOf(e.keyCode) > -1;
@@ -29,7 +29,7 @@ if (Meteor.isClient) {
       }
     },
 
-    'click [data-review-person] [data-label].delete': function (e) {
+    'click [data-show-person] [data-label].delete': function (e) {
       var perceptions = Session.get('reviewPerceptions');
       var tag = e.target.getAttribute('data-label');
       var idx = perceptions.indexOf(tag);
@@ -37,9 +37,13 @@ if (Meteor.isClient) {
       Session.set('reviewPerceptions', perceptions);
     },
 
-    'click [data-review-person] button': function () {
+    'click [data-review-person] [data-done-review]': function () {
       Session.set('meetingPerson', true);
       console.log(arguments);
+    },
+
+    'click [data-meet-person] [data-show-other]': function () {
+      window.location.reload();
     }
 
   })
