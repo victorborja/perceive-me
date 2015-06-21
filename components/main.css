@@ -1,0 +1,17 @@
+* {
+
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+h1 {
+	font-family: Helvetica, sans-serif;
+}
+
+h2 {
+	font-family: Times, 'Times New Roman', serif;
+	font-style: italic;
+}
