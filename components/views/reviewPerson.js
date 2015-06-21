@@ -14,7 +14,6 @@ if (Meteor.isClient) {
   Template.reviewPerson.events({
 
     'keyup input[data-perceptions]': function (e) {
-      console.log(arguments);
       var re = /[,\t\n\r]/i;
       var keyCodes = [188, 13, 32];
       var capture = keyCodes.indexOf(e.keyCode) > -1;
@@ -36,7 +35,7 @@ if (Meteor.isClient) {
       perceptions.splice(idx, 1);
       Session.set('reviewPerceptions', perceptions);
     }
-    
+
   })
 
 }
