@@ -14,6 +14,13 @@ Images.allow({
   }
 });
 
+People.random = function () {
+  var count = People.find().count();
+  var rand = Math.random() * count;
+  var person = People.findOne({}, {skip: rand});
+  return person;
+}
+
 People.attachSchema(new SimpleSchema({
 
   story_a: {
