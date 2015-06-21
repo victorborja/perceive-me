@@ -28,7 +28,7 @@ Router.route('showPerson', {
   data: function () {
     return {
       person: function () {
-        return People.random();
+        return People.getOneToShow();
       },
       reviewPerceptions: function () {
         return Session.get('reviewPerceptions');

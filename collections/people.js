@@ -1,38 +1,67 @@
 
 People = new Meteor.Collection('people');
 
-People.random = function () {
-  var count = People.find().count();
-  var rand = Math.random() * count;
-  var person = People.findOne({}, {skip: rand});
+People.getOneToShow = function () {
+  var person = People.findOne({}, {sort: {reviewsCount: -1}});
+  console.log("Showing", person);
   return person;
 }
+
+People.allow({
+  insert: function (userId, doc) {
+    return true;
+  },
+  update: function (userId) {
+    return true;
+  }
+});
 
 People.attachSchema(new SimpleSchema({
 
   story_a: {
-    label: 'Pregunta 1',
-    type: String
+    type: String,
   },
   story_b: {
-    label: 'Pregunta 2',
     type: String,
     optional: true
   },
   story_c: {
-    label: 'Pregunta 3',
     type: String,
+    optional: true
+  },
+  story_d: {
+    type: String,
+    optional: true
+  },
+  story_e: {
+    type: String,
+    optional: true
+  },
+  story_f: {
+    type: String,
+    optional: true
+  },
+
+  reviewsCount: {
+    type: Number,
+    min: 0,
     optional: true
   },
 
   preceptions: {
     type: [String],
-    optional: true
+    optional: true,
+    autoValue: function() {
+      return [];
+    }
   },
 
   tags: {
     type: [String],
-    optional: true
+    optional: true,
+    autoValue: function() {
+      return [];
+    }
   },
 
   picture: {
@@ -41,7 +70,6 @@ People.attachSchema(new SimpleSchema({
       afFieldInput: {
         type: 'fileUpload',
         collection: 'Images',
-        label: 'A picture of you' // optional
       }
     }
   }

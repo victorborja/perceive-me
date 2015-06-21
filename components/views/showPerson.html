@@ -1,6 +1,6 @@
 <template name="showPerson">
   {{#with person}} 
-    <div data-show-person>
+    <div data-show-person="{{reviewsCount}}">
       {{#if ../meetingPerson}}
         {{> meetPerson}}
       {{else}}
@@ -19,6 +19,9 @@
     <p>{{story_a}}</p>
     <p>{{story_b}}</p>
     <p>{{story_c}}</p>
+    <p>{{story_d}}</p>
+    <p>{{story_e}}</p>
+    <p>{{story_f}}</p>
 
     <label>Now that you know this person, which tags would you use?</label>
 
@@ -43,7 +46,7 @@
 
 
 <template name="perceptionsTags">
-  <div>
+  <div data-perceptions-tags>
    {{#each ../reviewPerceptions}}
       <div class="ui label">
         <i class="tags icon"></i>
@@ -56,7 +59,7 @@
 
 
 <template name="perceptionsInput">
-  <div class="ui right labeled left icon input">
+  <div data-perceptions-input class="ui right labeled left icon input">
     <i class="tags icon"></i>
     <input data-perceptions type="text" placeholder="Enter some tags">
     <div class="ui tag label">

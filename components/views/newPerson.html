@@ -2,9 +2,12 @@
 
 {{#autoForm collection="People" type="insert" id="newPersonForm" }}
 
-  {{> afQuickField name="story_a"}}
-  {{> afQuickField name="story_b"}}
-  {{> afQuickField name="story_c"}}
+  {{> afQuickField rows=6 cols=60 name="story_a" label="¿A qué te dedicas y en qué te gusta ocupar tu tiempo?" }}
+  {{> afQuickField rows=6 cols=60 name="story_b" label="¿Qué es lo más sorprendente que te ha pasado?" }}
+  {{> afQuickField rows=6 cols=60 name="story_c" label="Descríbenos a detalle cómo fue tu día ayer." }}
+  {{> afQuickField rows=6 cols=60 name="story_d" label="¿Por qué a veces te consideras mala persona?" }}
+  {{> afQuickField rows=6 cols=60 name="story_e" label="¿Por qué a veces te consideras buena persona?" }}
+  {{> afQuickField rows=6 cols=60 name="story_f" label="Cuéntanos sobre el lugar donde vives." }}
 
   {{> afQuickField name="picture"}}
 
