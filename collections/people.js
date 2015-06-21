@@ -1,19 +1,6 @@
 
 People = new Meteor.Collection('people');
 
-Images = new FS.Collection("images", {
-  stores: [new FS.Store.FileSystem("images", {})]
-});
-
-Images.allow({
-  insert: function (userId, doc) {
-    return true;
-  },
-  download: function (userId) {
-    return true;
-  }
-});
-
 People.random = function () {
   var count = People.find().count();
   var rand = Math.random() * count;
@@ -29,11 +16,23 @@ People.attachSchema(new SimpleSchema({
   },
   story_b: {
     label: 'Pregunta 2',
-    type: String
+    type: String,
+    optional: true
   },
   story_c: {
     label: 'Pregunta 3',
-    type: String
+    type: String,
+    optional: true
+  },
+
+  preceptions: {
+    type: [String],
+    optional: true
+  },
+
+  tags: {
+    type: [String],
+    optional: true
   },
 
   picture: {
@@ -49,3 +48,16 @@ People.attachSchema(new SimpleSchema({
 
 }));
 
+
+Images = new FS.Collection("images", {
+  stores: [new FS.Store.FileSystem("images", {})]
+});
+
+Images.allow({
+  insert: function (userId, doc) {
+    return true;
+  },
+  download: function (userId) {
+    return true;
+  }
+});

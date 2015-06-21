@@ -20,10 +20,17 @@ Router.route('newPerson', {
 Router.route('reviewPerson', {
   path: '/they',
   template: 'reviewPerson',
+  onBeforeAction: function () {
+    Session.set('reviewPerceptions', ['JAJA']);
+    this.next();
+  },
   data: function () {
     return {
       person: function () {
         return People.random();
+      },
+      reviewPerceptions: function () {
+        return Session.get('reviewPerceptions');
       }
     }
   }

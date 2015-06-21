@@ -4,7 +4,36 @@
   {{#with person}} 
      {{name}}
      {{story_a}}
-     <img src="{{image_url}}" />
+
+     <img src="{{image_url}}" width="30" height="30" />
+
+     {{> perceptionsInput}}
+
   {{/with}}
+
+</template>
+
+
+<template name="perceptionsInput">
+
+  <label>How do you percieve this person?</label>
+
+  <div>
+   {{#each ../reviewPerceptions}}
+      <div class="ui label">
+        {{this}}
+        <i class="delete icon" data-label="{{this}}"></i>
+      </div> 
+   {{/each}}
+  </div>
+
+  <div class="ui right labeled left icon input">
+    <i class="tags icon"></i>
+
+    <input data-perceptions type="text" placeholder="Enter some tags">
+    <div class="ui tag label">
+      Tags
+    </div>
+  </div>
 
 </template>

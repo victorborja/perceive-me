@@ -14,3 +14,4 @@ yogiben:autoform-file
 cfs:standard-packages
 cfs:filesystem
 semantic:ui-css
+bigdata:elasticsearch
