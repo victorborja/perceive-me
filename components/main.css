@@ -1,5 +1,18 @@
-* {
+/* COLORS */
 
+/* Orange: #d55b19 */
+
+body {
+	background-color: #d55b19;
+}
+
+.logo {
+	width: 10%;
+	height: 10%;
+}
+
+.home-polygon {
+	padding: 50px;
 }
 
 h1,
@@ -8,11 +21,18 @@ h2 {
 }
 
 h1 {
-	font-family: Eurostile, Helvetica, sans-serif;
+	font-family: Oswald, Helvetica, sans-serif;
+	font-style: bold;
+	color: white;
 }
 
 h2 {
-	font-family: AvenirLight, 'Times New Roman', serif;
+	margin-top: -8px;
+	font-family: Economica, Futura, sans-serif;
+	font-style: italic;
+	font-weight: 200;
+	font-size: 1.2em;
+	color: white;
 }
 
 /* FONTS */
