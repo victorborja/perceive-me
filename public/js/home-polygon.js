@@ -1,5 +1,5 @@
 function setup() {
-  var myCanvas = createCanvas(window.innerWidth, 250);
+  var myCanvas = createCanvas(400, 250);
   myCanvas.parent('home-polygon');
 }
 
