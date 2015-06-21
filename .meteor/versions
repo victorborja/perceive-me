@@ -4,6 +4,8 @@ aldeed:simple-schema@1.3.3
 autopublish@1.0.3
 autoupdate@1.2.1
 base64@1.0.3
+bigdata:elasticsearch@1.0.0
+bigdata:logs@1.0.5
 binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3
