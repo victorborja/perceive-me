@@ -1,0 +1,6 @@
+[data-new-person] .form-group > .ui.pointing.below.label {
+  display: table;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
