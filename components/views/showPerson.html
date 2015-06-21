@@ -12,23 +12,30 @@
 
 <template name="meetPerson">
   <div data-meet-person>
-    <img src="{{image_url}}"/>
+    <h4>Meet this person life story</h4>
 
-    Meet this person life story:
+    <p>
+      <img src="{{image_url}}"/>
+    </p>
 
-    <p>{{story_a}}</p>
-    <p>{{story_b}}</p>
-    <p>{{story_c}}</p>
-    <p>{{story_d}}</p>
-    <p>{{story_e}}</p>
-    <p>{{story_f}}</p>
+    <div class='ui piled segment'>
+      <p>{{story_a}}</p>
+      <p>{{story_b}}</p>
+      <p>{{story_c}}</p>
+      <p>{{story_d}}</p>
+      <p>{{story_e}}</p>
+      <p>{{story_f}}</p>
+    </div>
 
-    <label>Now that you know this person, which tags would you use?</label>
+   <div>
+     <h4>Now that you know this person, which tags would you use?</h4>
+     {{> perceptionsInput}}
+     <button data-done-review class="ui button primary">Done</button>
+     <p>
+       {{> perceptionsTags}}
+     </p> 
+   </div>
 
-   {{> perceptionsTags}}
-   {{> perceptionsInput}}
-
-   <button data-show-other class='ui button primary'>Done</button>
   </div>
 </template>
 

@@ -11,14 +11,18 @@
  
  {{> navbar}}
 
- {{> yield }}
+ <div class='main container'>
+   {{> yield }}
+ </div>
 
  {{> footer}}
 
 </template>
 
 <template name="header">
-  Header
+  <header>
+    <h6>Percieve.me</h6>
+  </header>
 </template>
 
 <template name="navbar">
@@ -34,5 +38,9 @@
 </template>
 
 <template name="footer">
-  Footer
+  <footer>
+     <small>
+       <a href="http://github.com/victorborja/percieve-me">SourceCode</a>
+     </small>
+  </footer>
 </template>

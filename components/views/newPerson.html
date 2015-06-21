@@ -2,6 +2,14 @@
 
 <section data-new-person>
 
+    <h2 class="ui header">
+      <i class="settings icon"></i>
+      <div class="content">
+        Create a new person
+        <div class="sub header">Tell us something about you</div>
+      </div>
+    </h2>
+
   {{#autoForm collection="People" type="insert" id="newPersonForm" }}
 
     {{> afQuickField name="picture" label="Sube tu retrato" label-class="ui pointing below label" }}
