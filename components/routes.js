@@ -17,11 +17,12 @@ Router.route('newPerson', {
   template: 'newPerson'
 });
 
-Router.route('reviewPerson', {
+Router.route('showPerson', {
   path: '/they',
-  template: 'reviewPerson',
+  template: 'showPerson',
   onBeforeAction: function () {
     Session.set('reviewPerceptions', []);
+    Session.set('meetingPerson', false);
     this.next();
   },
   data: function () {
@@ -31,6 +32,9 @@ Router.route('reviewPerson', {
       },
       reviewPerceptions: function () {
         return Session.get('reviewPerceptions');
+      },
+      meetingPerson: function () {
+        return Session.get('meetingPerson');
       }
     }
   }
